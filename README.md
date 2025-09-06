@@ -1,2 +1,2 @@
 # MangaBot
-MangaBot for discord
+MangaBot for discord.
