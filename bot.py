@@ -24,7 +24,7 @@ async def recommend(ctx,*args):
 
 @bot.command()
 async def random(ctx):
-    manga = mangaClass("")
+    manga = mangaClass.Manga("")
     manga.mangaRandom()
     await ctx.send(manga.mangaDesc())
 

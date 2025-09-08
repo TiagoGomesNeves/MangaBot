@@ -2,7 +2,6 @@ import json
 import random
 import requests
 import os
-from dotenv import load_dotenv
 
 class Manga:
     def __init__(self, mangaName):
