@@ -25,4 +25,4 @@ If you want to run this bot yourself, you will need to add the following environ
 
 `DB_CONNECTION`: which is a mongodb atlas database connection, which you can see how to setup here https://www.mongodb.com/products/platform/atlas-database
 
-
+Then run pip install -r /path/to/requirements.txt
