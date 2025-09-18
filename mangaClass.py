@@ -31,7 +31,10 @@ class Manga:
         self.mangaTitle= mangaDetails["title"]
         self.mangaType=mangaDetails["type"]
         self.mangaStatus=mangaDetails["status"]
-        self.mangaPublished=mangaDetails["published"]["from"][:10]
+        if (len(mangaDetails["published"]["from"]) >= 11):
+            self.mangaPublished=mangaDetails["published"]["from"][:10]
+        else:
+            self.mangaPublished = "NA"
         self.mangaScore=mangaDetails["score"]
         self.mangaRank=mangaDetails["rank"]
         self.mangaSynopsis=mangaDetails["synopsis"]
