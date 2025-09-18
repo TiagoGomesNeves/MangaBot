@@ -49,10 +49,10 @@ async def setListAt(ctx, num, *args):
     try:
         num = int(num)
         if (num < 1 or num > 5):
-            ctx.send("Please ensure the first argument is a number 1-5")
+            await ctx.send("Please ensure the first argument is a number 1-5")
             return
     except ValueError:
-        ctx.send("Please ensure the first argument is a number 1-5")
+        await ctx.send("Please ensure the first argument is a number 1-5")
         return
     num = num - 1
     name = " ".join(args[:])
