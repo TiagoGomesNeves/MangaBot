@@ -46,7 +46,14 @@ def listToString(user):
 
 @bot.command()
 async def setListAt(ctx, num, *args):
-    num = int(num)
+    try:
+        num = int(num)
+        if (num < 1 or num > 5):
+            ctx.send("Please ensure the first argument is a number 1-5")
+            return
+    except ValueError:
+        ctx.send("Please ensure the first argument is a number 1-5")
+        return
     num = num - 1
     name = " ".join(args[:])
     user = ctx.message.author.mention
