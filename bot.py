@@ -83,5 +83,9 @@ async def random(ctx):
     manga.mangaRandom()
     await ctx.send(manga.mangaDesc())
 
+@bot.command()
+async def commands(ctx):
+    message = "?Profile : this command if not used before generates a profile for the user and stores it on a database. The next ?profile commands will show that users top 5 list.\n?setListAt number mangaName : this allows users to alter their top 5 list by choosing a mangaName and a position on the list to place it in\n?random: this generates a random number which corresponds to a myanimelist id and uses an api to retrive that manga's information\n?recommend mangaName: this uses the mangaName and an api to grab information about that manga like its name, author, genres, and synopsis"
+    await ctx.send(message)
 
 bot.run(token)
